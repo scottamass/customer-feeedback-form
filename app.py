@@ -8,10 +8,18 @@ app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///comments.db'
 
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Int data base 
 
 db=SQLAlchemy(app)
 
+#users DB
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(200))
+    last_name = db.Column(db.String(200))
+    user_name = db.Column(db.String(200), nullable=False)
+    password = db.Column(db.String(200))
 #create db model
 
 class Comments(db.Model):
@@ -69,6 +77,6 @@ def admin():
     return render_template('admin.html' ,feedback=feedback ) 
 
 if __name__ == '__main__':
-    app.run(debug=True)    
+    app.run  
 
     
