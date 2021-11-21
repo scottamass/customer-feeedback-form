@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Customer Feedback</title>
+<style>
+    body {background-color: rgb(231, 158, 21);}
+    .container
+    {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(160, 160, 160);
+        border-radius: 10%;
+        padding: 1em;
+        max-width: 600px;
+        box-shadow: 5px 5px rgba(73, 73, 73, 0.705) ;
+    }
+    
+    textarea{
+        resize: none;
+    }
+
+    div .form
+    {
+    display: block;
+    text-align: center;
+}
+    form{
+        display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    }
+</style>
+</head>
+<body>
+    <div class=container>
+        <h1>
+        Jumpstart Customer Feedback Form 
+        </h1>
+        <form class="form">
+            <label>Customer Name</label>
+            <input type="text"
+            name="customer"
+            placeholder="please enter your name" 
+            required></input>
+            <br>
+            <label>rating</label>
+            <input type="radio" name="options" id="option1" value="option1" >1</input>
+            <input type="radio" name="options" id="option2" value="option2" >2</input>
+            <input type="radio" name="options" id="option3" value="option3" >3</input>
+            <input type="radio" name="options" id="option4" value="option4" >4</input>
+            <input type="radio" name="options" id="option5" value="option5" checked >5</input>
+            <br>
+            <Label>please put comments here</Label><br>
+            <textarea id="" type="text" cols="30" rows="10" placeholder="please add comments"  required></textarea>
+            <br>
+            <input type="submit"></input>
+
+
+        </form>
+
+    </div>
+</body>
+</html>
