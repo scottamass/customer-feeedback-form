@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,26 +36,29 @@
 </style>
 </head>
 <body>
-    <div class=container>
+-->   
+{% extends "template.html" %}
+{% block content%}   
+<div class=container>
         <h1>
-        Jumpstart Customer Feedback Form 
+        {{c_name}} Customer Feedback Form 
         </h1>
-        <form class="form">
+        <form class="form" action="/submit"    method="POST">
             <label>Customer Name</label>
             <input type="text"
-            name="customer"
+            name="name"
             placeholder="please enter your name" 
             required></input>
             <br>
             <label>rating</label>
-            <input type="radio" name="options" id="option1" value="option1" >1</input>
-            <input type="radio" name="options" id="option2" value="option2" >2</input>
-            <input type="radio" name="options" id="option3" value="option3" >3</input>
-            <input type="radio" name="options" id="option4" value="option4" >4</input>
-            <input type="radio" name="options" id="option5" value="option5" checked >5</input>
+            <input type="radio" name="options" id="option1" value= 1 >1</input>
+            <input type="radio" name="options" id="option2" value= 2 >2</input>
+            <input type="radio" name="options" id="option3" value= 3 >3</input>
+            <input type="radio" name="options" id="option4" value= 4 >4</input>
+            <input type="radio" name="options" id="option5" value= 5 checked >5</input>
             <br>
             <Label>please put comments here</Label><br>
-            <textarea id="" type="text" cols="30" rows="10" placeholder="please add comments"  required></textarea>
+            <textarea name="comments" id="" type="text" cols="30" rows="10" placeholder="please add comments"  required></textarea>
             <br>
             <input type="submit"></input>
 
@@ -63,5 +66,6 @@
         </form>
 
     </div>
-</body>
-</html>
+    {% endblock content %}
+<!--</body>
+</html> -->

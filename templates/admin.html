@@ -1,0 +1,24 @@
+
+{% extends "template.html" %}
+{% block content%} 
+<div class="container" class="table" >
+<table>
+
+<tr>
+    <th>Name </th>
+    <th>Rating </th>
+    <th>comments </th>
+</tr>
+
+    {% for row in feedback %}
+    <tr>
+    <td> {{row.name}}</td>
+    <td> {{row.rating}}</td>
+    <td> {{row.comments}}</td>
+    </tr>
+    {%endfor %}
+
+</table>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Customer Feedback</title>
+<style>
+    body {background-color: rgb(231, 158, 21);}
+    .container
+    {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(160, 160, 160);
+        border-radius: 10%;
+        padding: 1em;
+        max-width: 600px;
+        box-shadow: 5px 5px rgba(73, 73, 73, 0.705) ;
+    }
+    
+    textarea{
+        resize: none;
+    }
+
+    div .form
+    {
+    display: block;
+    text-align: center;
+}
+    form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    }
+
+    table{
+      
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    }
+
+    div .table
+    {
+    display: block;
+    text-align: center;
+    }
+</style>
+<body>
+<div id="content">{% block content %}{% endblock %}</div>
+</body>
+</html>
