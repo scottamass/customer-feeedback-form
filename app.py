@@ -77,6 +77,6 @@ def admin():
     return render_template('admin.html' ,feedback=feedback ) 
 
 if __name__ == '__main__':
-    app.run  
+    app.run()
 
     
